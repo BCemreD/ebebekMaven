@@ -37,7 +37,7 @@ public class Test2 {
 	@Before
 	public void setUp() throws MalformedURLException {
 		System.setProperty("chromeDriver","drivers/chromedriver");
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), null);
+		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
